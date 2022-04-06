@@ -1,21 +1,37 @@
-import React from 'react'
-import {  Badge } from "react-bootstrap";
-import {Col,Row,Card,Button} from 'antd';
-const Responses = (data:any) => {
-    console.log(data)
+import React from "react";
+import { Col, Row, Card } from "antd";
+import {Container} from 'react-bootstrap';
+const Responses = (data: any) => {
+  console.log(data);
   return (
-     
-        <>
-        {data?data.data.map((item:any) => {
-            item.data.map((item1:any)=>(
-                console.log(item1.response)
-            ))
-            }):<h1>loading</h1>}
-      </>
-     
-    
+    <Container >
+    <Row style={{ marginTop: "30px" }}>
+       
+      {data ? (
+           
+        data.data.map((item: any) => (
+            <Col key="abc" md={{ span: 8 }}>
+           <Card style={{ width: "20rem"}} bordered={true} >
+               {
+           item.data.map((item1: any) => (
+            <>
+            {console.log(item1)}
+            <p>{`${item1.response}`}</p>
+            </>
+          ))
+       
+          }
+          </Card>
+            </Col>
+        ))
+        
+      ) : (
+        <h1>loading</h1>
+      )}
+      
+    </Row>
+    </Container>
+  );
+};
 
-  )
-}
-
-export default Responses
+export default Responses;
