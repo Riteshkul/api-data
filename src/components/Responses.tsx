@@ -15,7 +15,7 @@ const Responses = (data: any) => {
                {
            item.data.map((item1: any) => (
             <>
-            <p>{item1.label}={`${item1.response.choice_text?item1.response.choice_text:item1.response}`}</p>
+            <p>{item1.label==="Ask your question"?"Elective":item1.label.slice(10,)}={`${item1.response.choice_text?item1.response.choice_text:item1.response}`}</p>
             </>
           ))
        
