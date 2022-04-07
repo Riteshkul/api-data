@@ -14,9 +14,14 @@ const Header = () => {
             <a className="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Link</a>
+            <a className="nav-link" href="#">Machine Learning</a>
           </li>
-          
+          <li className="nav-item">
+            <a className="nav-link" href="#">Data Science</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#">Cloud Computing</a>
+          </li>
         </ul>
         <form className="d-flex">
           <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>

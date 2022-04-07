@@ -10,13 +10,13 @@ const Responses = (data: any) => {
       {data ? (
            
         data.data.map((item: any) => (
-            <Col key="abc" md={{ span: 8 }}>
+            <Col  md={{ span: 8 }}>
            <Card style={{ width: "20rem"}} bordered={true} >
                {
            item.data.map((item1: any) => (
             <>
-            {console.log(item1)}
-            <p>{`${item1.response}`}</p>
+            {/* {console.log(item1)} */}
+            <p>{item1.label}={`${item1.response.choice_text?item1.response.choice_text:item1.response}`}</p>
             </>
           ))
        
