@@ -15,7 +15,6 @@ const Responses = (data: any) => {
                {
            item.data.map((item1: any) => (
             <>
-            {/* {console.log(item1)} */}
             <p>{item1.label}={`${item1.response.choice_text?item1.response.choice_text:item1.response}`}</p>
             </>
           ))
